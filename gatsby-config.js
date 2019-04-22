@@ -1,11 +1,11 @@
-const Config = require('./config');
+const Config = require('./config/meta')
 
 module.exports = {
   siteMetadata: {
     siteUrl: Config.siteUrl,
     siteTitle: Config.siteTitle,
     siteTitleShort: Config.siteTitleShort,
-    siteDescription: Config.siteDescription,
+    siteDescription: Config.siteDescription
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -13,38 +13,54 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/media/images`
+      }
+    },
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: './config/typography'
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-eslint',
-    'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-netlify',
-    // {
-    //   resolve: 'gatsby-plugin-web-font-loader', // Google Fonts
-    //   options: {
-    //     google: {
-    //       families: [],
-    //     },
-    //   },
-    // },
     {
-      resolve: `gatsby-plugin-purgecss`, // Remove CSS
+      resolve: 'gatsby-plugin-react-svg',
       options: {
-        printRejected: true,
-        develop: true,
-      },
+        rule: {
+          include: /icons/
+        }
+      }
     },
     {
-      resolve: `gatsby-plugin-google-analytics`, // Google Analytics
+      resolve: 'gatsby-plugin-google-analytics', // Google Analytics
       options: {
-        trackingId: Config.googleAnalyticsId,
-      },
+        trackingId: Config.googleAnalyticsId
+      }
     },
     {
-      resolve: `gatsby-plugin-manifest`, // Progressive Web App
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: Config.siteUrl
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        // Setting a color is optional.
+        color: Config.manifest.themeColor,
+        // Disable the loading spinner.
+        showSpinner: false
+      }
+    },
+    'gatsby-plugin-advanced-sitemap',
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-manifest', // Progressive Web App
       options: {
         name: Config.siteTitle,
         short_name: Config.siteTitleShort,
@@ -52,9 +68,9 @@ module.exports = {
         start_url: '/',
         background_color: Config.manifest.backgroundColor,
         theme_color: Config.manifest.themeColor,
-        display: `standalone`,
-        icon: Config.logo,
-      },
-    },
-  ],
-};
+        display: 'standalone',
+        icon: Config.logo
+      }
+    }
+  ]
+}

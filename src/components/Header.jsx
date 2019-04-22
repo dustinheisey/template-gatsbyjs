@@ -1,5 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-const Header = () => <header>Placeholder Header</header>;
+const Header = () => <header>Placeholder Header</header>
 
-export default Header;
+export default Header
