@@ -1,50 +1,54 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import 'react-tabs/style/react-tabs.css'
-import Plan from './Plan'
+// import 'react-tabs/style/react-tabs.css'
+import Plan from '../molecules/Plan'
 
-const StyledTabs = styled(Tabs)``
+const StyledTabs = styled(Tabs)`
+  padding: var(--md);
+  margin: var(--md) 0;
+`
 const StyledTab = styled(Tab)`
+  margin: 0;
   display: inline-block;
-  border: 1px solid transparent;
-  border-bottom: none;
-  bottom: -1px;
   position: relative;
   list-style: none;
-  padding: 6px 12px;
+  outline: none;
+  padding: var(--xs) var(--md);
   cursor: pointer;
 
-  &:focus {
-    box-shadow: 0 0 5px hsl(208, 99%, 50%);
-    border-color: hsl(208, 99%, 50%);
-    outline: none;
+  & p {
+    padding: var(--sm);
+    border-bottom: 1.5px solid var(--secondary-light);
   }
 
-  &:focus:after {
-    content: '';
-    position: absolute;
-    height: 5px;
-    left: -4px;
-    right: -4px;
-    bottom: -5px;
-    background: #fff;
+  &[aria-selected='true'] p {
+    color: var(--primary);
+    border-color: var(--primary);
   }
 `
 const StyledTabList = styled(TabList)`
-  border-bottom: 1px solid #aaa;
   margin: 0 0 10px;
-  padding: 0;
+  padding: var(--sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 const StyledTabPanel = styled(TabPanel)`
-  display: none;
+  display: flex;
+  width: 85%;
+  margin: auto;
 `
 
 export default () => (
   <StyledTabs>
     <StyledTabList>
-      <StyledTab>Monthly</StyledTab>
-      <StyledTab>Yearly</StyledTab>
+      <StyledTab>
+        <p>Monthly</p>
+      </StyledTab>
+      <StyledTab>
+        <p>Yearly</p>
+      </StyledTab>
     </StyledTabList>
 
     <StyledTabPanel>
@@ -52,8 +56,8 @@ export default () => (
         caption='Begginer'
         price='$20'
         frequency='/ Month'
-        BtnLink='/'
-        BtnText='Plan'
+        btnLink='/'
+        btnText='Plan'
       >
         <p>
           Sed accusam sanctus ea amet dolor et, at eos clita
@@ -66,8 +70,8 @@ export default () => (
         caption='Personal'
         price='$29'
         frequency='/ Month'
-        BtnLink='/'
-        BtnText='Plan'
+        btnLink='/'
+        btnText='Plan'
       >
         <p>
           Sed accusam sanctus ea amet dolor et, at eos clita
@@ -80,8 +84,8 @@ export default () => (
         caption='Unlimited'
         price='$79'
         frequency='/ Month'
-        BtnLink='/'
-        BtnText='Plan'
+        btnLink='/'
+        btnText='Plan'
       >
         <p>
           Sed accusam sanctus ea amet dolor et, at eos clita
@@ -96,8 +100,8 @@ export default () => (
         caption='Begginer'
         price='$200'
         frequency='/ Year'
-        BtnLink='/'
-        BtnText='Plan'
+        btnLink='/'
+        btnText='Plan'
       >
         <p>
           Sed accusam sanctus ea amet dolor et, at eos clita
@@ -110,8 +114,8 @@ export default () => (
         caption='Personal'
         price='$290'
         frequency='/ Year'
-        BtnLink='/'
-        BtnText='Plan'
+        btnLink='/'
+        btnText='Plan'
       >
         <p>
           Sed accusam sanctus ea amet dolor et, at eos clita
@@ -124,8 +128,8 @@ export default () => (
         caption='Unlimited'
         price='$790'
         frequency='/ Year'
-        BtnLink='/'
-        BtnText='Plan'
+        btnLink='/'
+        btnText='Plan'
       >
         <p>
           Sed accusam sanctus ea amet dolor et, at eos clita

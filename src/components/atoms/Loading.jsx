@@ -12,7 +12,7 @@ import ReactLoading from 'react-loading'
 // spinningBubbles
 // spokes
 
-const Example = ({ type, color, height, width }) => (
+export default ({ type, color, height, width }) => (
   <ReactLoading
     type={type}
     color={color}
@@ -20,5 +20,3 @@ const Example = ({ type, color, height, width }) => (
     width={width}
   />
 )
-
-export default Example

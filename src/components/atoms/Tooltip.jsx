@@ -18,7 +18,7 @@ const ArrowStyle = {
   outline: 'none',
   border: 'none'
 }
-const Tooltip = ({ position, trigger, children }) => (
+export default ({ position, trigger, children }) => (
   <Popup
     position={position}
     on='hover'
@@ -29,5 +29,3 @@ const Tooltip = ({ position, trigger, children }) => (
     {children}
   </Popup>
 )
-
-export default Tooltip

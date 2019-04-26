@@ -27,7 +27,7 @@ const StyledTag = styled.span`
   }};
 `
 
-const Tag = ({ tag, tag1, tag2, tag3, tag4, tag5 }) => {
+export default ({ tag, tag1, tag2, tag3, tag4, tag5 }) => {
   if (tag1) {
     return <StyledTag tag1>{tag}</StyledTag>
   }
@@ -45,5 +45,3 @@ const Tag = ({ tag, tag1, tag2, tag3, tag4, tag5 }) => {
   }
   return <StyledTag>{tag}</StyledTag>
 }
-
-export default Tag

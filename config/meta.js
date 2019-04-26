@@ -10,10 +10,7 @@ module.exports = {
     themeColor: 'Theme Color',
     backgroundColor: 'Background Color'
   },
-  logo: path.resolve(
-    __dirname,
-    '../src/media/images/icon.png'
-  ),
+  logo: path.resolve(__dirname, '../src/images/icon.png'),
   googleAnalyticsId: 'UA-XXXXX',
   facebook: 'Your optional Facebook App ID',
   twitter: 'Your Twitter username'

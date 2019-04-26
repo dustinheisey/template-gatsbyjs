@@ -13,6 +13,7 @@ const StyledSubmit = styled.input`
   outline: none;
   padding: var(--sm) var(--md);
   margin: var(--sm);
+  border-radius: 5px;
   transition: all 0.5s;
 
   background: var(--primary);
@@ -23,7 +24,12 @@ const StyledSubmit = styled.input`
   }
 `
 
-const Input = ({ name, type }) => {
+const StyledArea = styled.textarea`
+  outline: none;
+  margin: var(--sm);
+`
+
+export default ({ name, type }) => {
   if (type === 'search') {
     return (
       <StyledLabel htmlFor={name}>
@@ -40,6 +46,15 @@ const Input = ({ name, type }) => {
       </StyledLabel>
     )
   }
+
+  if (type === 'area') {
+    return (
+      <StyledLabel htmlFor={name}>
+        {name}
+        <StyledArea name={name} />
+      </StyledLabel>
+    )
+  }
   return (
     <StyledLabel htmlFor={name}>
       {name}
@@ -47,5 +62,3 @@ const Input = ({ name, type }) => {
     </StyledLabel>
   )
 }
-
-export default Input

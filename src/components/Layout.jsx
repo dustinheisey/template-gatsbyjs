@@ -3,7 +3,7 @@ import GlobalStyle from '../../config/global'
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({ children }) => (
+export default ({ children }) => (
   <>
     <GlobalStyle />
     <Header />
@@ -11,5 +11,3 @@ const Layout = ({ children }) => (
     <Footer />
   </>
 )
-
-export default Layout

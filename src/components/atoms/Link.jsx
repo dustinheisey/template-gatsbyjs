@@ -6,7 +6,6 @@ const StyledInternal = styled(Link)`
   text-decoration: none;
   color: var(--link);
   transition: all 0.5s;
-  margin: var(--sm);
 
   &:hover {
     color: var(--link-hover);
@@ -22,7 +21,7 @@ const StyledExternal = styled.a`
   }
 `
 
-const Links = ({ link, children, external }) => {
+export default ({ link, children, external }) => {
   if (external) {
     return (
       <StyledExternal
@@ -38,5 +37,3 @@ const Links = ({ link, children, external }) => {
     <StyledInternal to={link}>{children}</StyledInternal>
   )
 }
-
-export default Links

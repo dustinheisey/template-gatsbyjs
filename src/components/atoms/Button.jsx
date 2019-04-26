@@ -6,14 +6,12 @@ const StyledButton = styled.button`
   border-radius: 5px;
   outline: none;
   padding: var(--sm) var(--md);
-  margin: var(--sm);
   transition: all 0.5s;
 `
 
 const StyledPrimary = styled(StyledButton)`
   background: var(--primary);
   color: var(--secondary-lighter);
-
   &:hover {
     background: var(--primary-dark);
   }

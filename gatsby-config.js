@@ -1,5 +1,7 @@
 const Config = require('./config/meta')
 
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     siteUrl: Config.siteUrl,
@@ -8,14 +10,16 @@ module.exports = {
     siteDescription: Config.siteDescription
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'images',
-        path: `${__dirname}/src/media/images`
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`)
       }
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-typography',
@@ -23,8 +27,7 @@ module.exports = {
         pathToConfigModule: './config/typography'
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+
     'gatsby-plugin-eslint',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-netlify',
