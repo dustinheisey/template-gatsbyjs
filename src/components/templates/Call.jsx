@@ -3,12 +3,11 @@ import React from 'react'
 import styled from 'styled-components'
 import Call from '../molecules/Call'
 import Link from '../atoms/Link'
-import Placeholder from '../images/Placeholder'
+import Placeholder from '../../images/placeholder.jpg'
 
 const StyledCall = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: var(--md);
 `
@@ -28,7 +27,7 @@ const StyledCallCenter = styled(StyledCall)`
 `
 const CallFirst = () => (
   <Call left>
-    <Placeholder />
+    <img src={Placeholder} alt='Placeholder' />
     <StyledCall>
       <h2>Heading</h2>
       <p>
@@ -56,13 +55,13 @@ const CallSecond = () => (
         Link
       </Link>
     </StyledCall>
-    <Placeholder />
+    <img src={Placeholder} alt='Placeholder' />
   </Call>
 )
 
 const CallThird = () => (
   <Call left>
-    <Placeholder />
+    <img src={Placeholder} alt='Placeholder' />
     <StyledCall>
       <h2>Heading</h2>
       <p>

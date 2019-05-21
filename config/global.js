@@ -57,4 +57,8 @@ export default createGlobalStyle`
     background: var(--primary);
     color: var(--secondary-lighter);
   }
+
+  img {
+    width: 100%;
+  }
 `

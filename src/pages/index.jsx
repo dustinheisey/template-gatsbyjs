@@ -3,8 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
-// import Customers from '../components/templates/Customers'
-// import Placeholder from '../components/images/Placeholder'
+import Customers from '../components/templates/Customers'
 import Cover from '../components/templates/Covers'
 import Form from '../components/templates/Forms'
 import Tabs from '../components/templates/Tabs'
@@ -20,7 +19,7 @@ export default () => (
   <Layout>
     <SEO title='Placeholder' description='Placeholder' />
     <Cover />
-    {/* <Customers /> */}
+    <Customers />
     <CallFirst />
     <CallSecond />
     <CallThird />

@@ -6,9 +6,9 @@ const StyledGrid = styled.section`
   display: grid;
   grid-template-columns: ${props =>
     props.left
-      ? '.66fr .33fr'
+      ? '.55fr .45fr'
       : props.right
-      ? '.33fr .66fr'
+      ? '.45fr .55fr'
       : '1fr'};
   grid-gap: var(--md);
   align-content: center;
@@ -26,3 +26,5 @@ export default ({ left, right, children }) => {
   }
   return <StyledGrid center>{children}</StyledGrid>
 }
+
+export { StyledGrid }
