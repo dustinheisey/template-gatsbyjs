@@ -4,6 +4,7 @@ import Links from './Link'
 
 const StyledButton = styled.button`
   border-radius: 5px;
+  border: none;
   outline: none;
   padding: var(--sm) var(--md);
   transition: all 0.5s;

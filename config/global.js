@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import styledBreakpoint from '@humblebee/styled-components-breakpoint'
 
 export default createGlobalStyle`
   :root {
@@ -58,7 +59,15 @@ export default createGlobalStyle`
     color: var(--secondary-lighter);
   }
 
-  img {
-    width: 100%;
+  * {
+    margin: 0;
   }
 `
+
+export const media = styledBreakpoint({
+  phone: 599,
+  tabletPortrait: 600,
+  tabletLandscape: 900,
+  desktop: 1200,
+  bigDesktop: 1800
+})

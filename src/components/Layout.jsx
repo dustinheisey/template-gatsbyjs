@@ -1,6 +1,6 @@
 import React from 'react'
 import GlobalStyle from '../../config/global'
-import Header from './Header'
+import Header from './header/Header'
 import Footer from './Footer'
 
 export default ({ children }) => (

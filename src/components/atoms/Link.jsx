@@ -6,6 +6,7 @@ const StyledInternal = styled(Link)`
   text-decoration: none;
   color: var(--link);
   transition: all 0.5s;
+  display: inline-block;
 
   &:hover {
     color: var(--link-hover);
@@ -15,6 +16,7 @@ const StyledExternal = styled.a`
   text-decoration: none;
   color: var(--link);
   transition: all 0.5s;
+  padding-bottom: 8px;
 
   &:hover {
     color: var(--link-hover);
