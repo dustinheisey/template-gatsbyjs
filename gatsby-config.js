@@ -11,12 +11,12 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/media/images`,
         name: 'images'
       }
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
@@ -33,7 +33,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /icons/
+          include: /inline/
         }
       }
     },
@@ -52,9 +52,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
-        // Setting a color is optional.
         color: Config.manifest.themeColor,
-        // Disable the loading spinner.
         showSpinner: false
       }
     },

@@ -21,14 +21,11 @@ export default new Typography({
   ],
   scaleRatio: 4.5,
   overrideStyles: () => ({
-    // h2: {
-    //   fontSize: '300%'
-    // },
-    // h3: {
-    //   fontSize: '150%'
-    // },
     p: {
       maxWidth: '70ch'
     }
-  })
+  }),
+  '@media only screen and (max-width:599px)': {
+    h1: {}
+  }
 })

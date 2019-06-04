@@ -26,13 +26,11 @@
     "gatsby-plugin-typography": "^2.2.13",
     "gatsby-source-filesystem": "^2.0.38",
     "gatsby-transformer-sharp": "^2.1.21",
-    "intersection-observer": "^0.7.0",
     "react": "^16.8.6",
     "react-accessible-accordion": "^3.0.0",
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-loading": "^2.0.3",
     "react-photo-gallery": "^7.0.2",
     "react-pose": "^4.0.8",
     "react-slick": "^0.24.0",
@@ -40,9 +38,7 @@
     "react-tabs": "^3.0.0",
     "react-typography": "^0.16.19",
     "reactjs-popup": "^1.4.1",
-    "slick-carousel": "^1.8.1",
     "styled-components": "^4.2.1",
-    "styled-components-breakpoint": "^2.1.1",
     "typography": "^0.16.19"
   },
   "devDependencies": {

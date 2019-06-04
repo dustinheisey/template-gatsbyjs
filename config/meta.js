@@ -7,10 +7,13 @@ module.exports = {
   siteDescription: 'Placeholder Description',
   author: 'Placeholder Author',
   manifest: {
-    themeColor: 'Theme Color',
-    backgroundColor: 'Background Color'
+    themeColor: '#000000',
+    backgroundColor: '#ffffff'
   },
-  logo: path.resolve(__dirname, '../src/images/icon.png'),
+  logo: path.resolve(
+    __dirname,
+    '../src/media/images/logo.png'
+  ),
   googleAnalyticsId: 'UA-XXXXX',
   facebook: 'Your optional Facebook App ID',
   twitter: 'Your Twitter username'

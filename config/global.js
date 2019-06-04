@@ -24,6 +24,13 @@ export default createGlobalStyle`
     --accent-light: #000;
     --accent-lighter: #000;
 
+    /* Text Colors */
+    --text-darker: #011409;
+    --text-dark: #2D3631;
+    --text: #dedede;
+    --text-light: #cdcdcd;
+    --text-lighter: #F8FFFB;
+
     /* Link Color */
     --link: #3071C0;
     --link-hover: #00459C;
@@ -46,6 +53,10 @@ export default createGlobalStyle`
     --lg: 5vmin;
     --xl: 7vmin;
     --xxl: 15vmin;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   .tooltip {
