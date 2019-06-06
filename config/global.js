@@ -4,43 +4,39 @@ import styledBreakpoint from '@humblebee/styled-components-breakpoint'
 export default createGlobalStyle`
   :root {
     /* Primary Colors */
-    --primary-darker: #86BCFF;
-    --primary-dark: #5792DA;
-    --primary: #3071C0;
-    --primary-light: #1659AB;
-    --primary-lighter: #00459C;
+    --primary-darker: ;
+    --primary-dark: ;
+    --primary: ;
+    --primary-light: ;
+    --primary-lighter: ;
 
     /* Secondary Colors */
-    --secondary-darker: #222222;
-    --secondary-dark: #555555;
-    --secondary: #bbbbbb;
-    --secondary-light: #dddddd;
-    --secondary-lighter: #ffffff;
+    --secondary-darker: ;
+    --secondary-dark: ;
+    --secondary: ;
+    --secondary-light: ;
+    --secondary-lighter: ;
 
     /* Accent Colors */
-    --accent-darker: #000;
-    --accent-dark: #000;
-    --accent: #000;
-    --accent-light: #000;
-    --accent-lighter: #000;
+    --accent-darker: ;
+    --accent-dark: ;
+    --accent: ;
+    --accent-light: ;
+    --accent-lighter: ;
 
     /* Text Colors */
-    --text-darker: #011409;
-    --text-dark: #2D3631;
-    --text: #dedede;
-    --text-light: #cdcdcd;
-    --text-lighter: #F8FFFB;
-
-    /* Link Color */
-    --link: #3071C0;
-    --link-hover: #00459C;
+    --text-darker: ;
+    --text-dark: ;
+    --text: ;
+    --text-light: ;
+    --text-lighter: ;
 
     /* Tag Colors */
-    --tag1: red;
-    --tag2: orange;
-    --tag3: yellow;
-    --tag4: green;
-    --tag5: blue;
+    --tag1: ;
+    --tag2: ;
+    --tag3: ;
+    --tag4: ;
+    --tag5: ;
 
     /* Box Shadow */
     --shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

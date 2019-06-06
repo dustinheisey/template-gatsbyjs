@@ -1,5 +1,7 @@
 import { React, Default } from '../../config/imports'
 
+import Masonry from '../components/elements/molecules/layout/Masonry'
+
 const Content = {
   title: '',
   description: ''

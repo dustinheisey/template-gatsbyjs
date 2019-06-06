@@ -2,7 +2,7 @@ import {
   React,
   styled,
   media
-} from '../../../../config/imports'
+} from '../../../../../config/imports'
 
 const StyledGrid = styled.section`
   display: grid;
